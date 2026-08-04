@@ -32,7 +32,7 @@
     "type-check": "tsc --noEmit",
     "lint": "eslint ${@:-src/}",
     "lint:fix": "eslint --fix ${@:-src/}",
-    "lint:sarif": "eslint -f @microsoft/eslint-formatter-sarif --fix ${@:-src/}",
+    "lint:sarif": "eslint -f eslint-formatter-sarif --fix ${@:-.} || true",
     "format": "prettier --write ${@:-.}",
     "format:check": "prettier --check ${@:-.}",
     "doc": "run-s compile-sql && typedoc src/lib.ts",
@@ -54,17 +54,17 @@
   },
   "devDependencies": {
     "@eslint/js": "10.0.1",
-    "@microsoft/eslint-formatter-sarif": "3.1.0",
     "@total-typescript/tsconfig": "1.0.4",
     "@tsconfig/strictest": "2.0.8",
     "@types/sql.js": "1.4.11",
-    "eslint": "10.7.0",
+    "eslint": "10.8.0",
     "eslint-config-prettier": "10.1.8",
-    "npm-run-all2": "9.0.2",
+    "eslint-formatter-sarif": "github:iiiii7d/eslint-formatter-sarif",
+    "npm-run-all2": "9.0.3",
     "prettier": "3.9.6",
     "typedoc": "0.28.20",
     "typescript": "6.0.3",
     "typescript-eslint": "8.65.0"
   },
-  "packageManager": "pnpm@11.17.0+sha512.cca3cea332ad254bb84145f966d19f4879615210346fc92c79a047f23a0d7b3cca3c3792f0076ba1f1831d277efbcf0a9119b31a9a60eca7fb3d6231f331ef72"
+  "packageManager": "pnpm@11.19.0+sha512.7881f3ed590d472c4a955e2b88b2121791116066dcc88cbca3849ec9b60f1bbaa6d2ccb221fa91da4e1c65bef2bcbe379365aea7ac539c7bf86dedc3a1b22dce"
 }

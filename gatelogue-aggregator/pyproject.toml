@@ -31,7 +31,7 @@ dependencies = [
   "gatelogue-types",
   "click==8.4.2",
   "msgspec==0.21.1",
-  "pandas==3.0.3",
+  "pandas==3.0.5",
   "rich==15.0.0",
   "rnet==3.0.0rc22",
   "BeautifulSoup4==4.15.0",
@@ -70,7 +70,7 @@ workspace.parallel = true
 extra-dependencies = [
   "sphinx==9.1.0", 
   "sphinxcontrib-programoutput==0.20", 
-  "sphinx-codeautolink==0.18.1", 
+  "sphinx-codeautolink==0.19.0", 
   "sphinx_rtd_theme==3.1.0", 
 ]
 [tool.hatch.envs.docs.scripts]

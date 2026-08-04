@@ -80,9 +80,9 @@ wheels = [{ url = "https://files.pythonhosted.org/packages/df/b2/87e62e8c3e2f4b3
 
 [[packages]]
 name = "pandas"
-version = "3.0.3"
-sdist = { url = "https://files.pythonhosted.org/packages/f8/87/4341c6252d1c47b08768c3d25ac487362bf403f0313ddae4a2a26c9b1b4c/pandas-3.0.3.tar.gz", upload-time = 2026-05-11T18:54:29Z, size = 4651414, hashes = { sha256 = "696a4a00a2a2a35d4e5deb3fc946641b96c944f02230e4f76137fe35d806c4fc" } }
-wheels = [{ url = "https://files.pythonhosted.org/packages/58/3b/1cdec6772bdbaf7b25dab360c59f03cadf05492dd724c6540af905389b07/pandas-3.0.3-cp314-cp314-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl", upload-time = 2026-05-11T18:53:49Z, size = 10914065, hashes = { sha256 = "9d71c63ae4ebdbf70209742096f1fc46a83a0613c99d4b23766cced9ff8cd62a" } }]
+version = "3.0.5"
+sdist = { url = "https://files.pythonhosted.org/packages/be/4f/5f3422a2afec5ffc46308b79e53291365a93748b498ac2e58bead0197916/pandas-3.0.5.tar.gz", upload-time = 2026-07-22T22:19:28Z, size = 4658219, hashes = { sha256 = "dca3734d6ab7c906e6730f0788b0a1dbb9f2467731f9711f77995c8e9d62d712" } }
+wheels = [{ url = "https://files.pythonhosted.org/packages/fa/de/ceae2adf7034e07e9910299fe412e1819c4f0dd520700a888bcb03625448/pandas-3.0.5-cp314-cp314-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl", upload-time = 2026-07-22T22:18:57Z, size = 10963120, hashes = { sha256 = "9e94c2c5ca43bd3ca32bf64d32308887b65e5f9bfd8023ea52755107a999f93b" } }]
 
 [[packages]]
 name = "pillow"
@@ -170,9 +170,9 @@ wheels = [{ url = "https://files.pythonhosted.org/packages/b7/ce/149a00dd41f10bc
 
 [[packages]]
 name = "soupsieve"
-version = "2.8.4"
-sdist = { url = "https://files.pythonhosted.org/packages/47/2c/0a5f6f8ee0d5589e48c7640213ed5175d52cf540a06725b628cc1a45d6ce/soupsieve-2.8.4.tar.gz", upload-time = 2026-05-24T13:55:57Z, size = 121110, hashes = { sha256 = "e121fd02e975c695e4e9e8774a5ee35d74714b59307868dcc5319ad2d9e3328e" } }
-wheels = [{ url = "https://files.pythonhosted.org/packages/5e/f5/0c41cb68dcae6b7de4fac4188a3a9589e21fb31df21ea3a2e888db95e6c9/soupsieve-2.8.4-py3-none-any.whl", upload-time = 2026-05-24T13:55:55Z, size = 37304, hashes = { sha256 = "e7e6b0769c8f51ed59acab6e994b00621096cfb1c640a7509295987388fbaf65" } }]
+version = "2.9.1"
+sdist = { url = "https://files.pythonhosted.org/packages/d9/38/e12680bbe6b4f8f3d17adcaf38d26850aa756c85cf4a80e79fc12a018fe8/soupsieve-2.9.1.tar.gz", upload-time = 2026-07-21T16:57:17Z, size = 122261, hashes = { sha256 = "c33e6605bbc71dd628b00c632d58ae607c22bade247e52553928f83bbb75b4ba" } }
+wheels = [{ url = "https://files.pythonhosted.org/packages/0f/2c/437fe806897c2d6cfdc3ee43a18da8bf8e568530a4ae9bac781541ca9896/soupsieve-2.9.1-py3-none-any.whl", upload-time = 2026-07-21T16:57:16Z, size = 37404, hashes = { sha256 = "4f4477399246b7a0c720a88ca2454b11cd6bb9ae4c9d170140786e916776c14c" } }]
 
 [[packages]]
 name = "typing-extensions"

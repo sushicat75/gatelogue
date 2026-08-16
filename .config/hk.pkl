@@ -1,15 +1,14 @@
-amends "package://github.com/jdx/hk/releases/download/v1.54.0/hk@1.54.0#/Config.pkl"
-import "package://github.com/jdx/hk/releases/download/v1.54.0/hk@1.54.0#/Builtins.pkl"
+amends "package://github.com/jdx/hk/releases/download/v1.54.1/hk@1.54.1#/Config.pkl"
+import "package://github.com/jdx/hk/releases/download/v1.54.1/hk@1.54.1#/Builtins.pkl"
 
 local init = new Group {
     steps {
         ["init_types_ts"] = new Step {
             glob = "**/*"
             dir = "gatelogue-types-ts"
-            check = "pnpm i && pnpm prepare"
+            check = "pnpm i && pnpm compile-sql"
         }
         ["init_client"] = new Step {
-            depends = List("init_types_ts")
             glob = "**/*"
             dir = "gatelogue-client"
             check = "pnpm i"
@@ -65,7 +64,7 @@ local linters = new Mapping<String, Step> {
 local type_checkers = new Mapping<String, Step> {
     ["hatch_type_check"] {
         workspace_indicator = "pyproject.toml"
-        glob = Builtins.ruff.glob
+        types = Builtins.ruff.types
         check = "cd {{ workspace }} && hatch check types"
     }
     ["tsc_type_check"] {

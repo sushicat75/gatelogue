@@ -1,12 +1,12 @@
 [build-system]
-requires = ["hatchling==1.31.0"]
+requires = ["hatchling==1.32.0"]
 build-backend = "hatchling.build"
 
 [project]
 name = "gatelogue-aggregator"
 dynamic = ["version"]
 description = ''
-readme = "../README.md"
+#readme = "../README.md"
 requires-python = ">=3.13"
 license = "GPL-3.0-only"
 keywords = ["gatelogue", "mrt", "minecart rapid transit"]
@@ -35,7 +35,7 @@ dependencies = [
   "rich==15.0.0",
   "rnet==3.0.0rc22",
   "BeautifulSoup4==4.15.0",
-#  "pydot==4.0.1",
+  "wikitextparser==1.0.3",
   "pillow==12.3.0",
   "pyyaml==6.0.3"
 ]
@@ -64,7 +64,9 @@ workspace.members = [
   { path = "../gatelogue-types-py", features = ["dev"] }
 ]
 workspace.parallel = true
-#python = "3.12"
+post-install-commands = [
+  "hatch run uv pip install -e . && hatch run uv pip install -e ../gatelogue-types-py",
+]
 
 [tool.hatch.envs.docs]
 extra-dependencies = [
@@ -75,12 +77,12 @@ extra-dependencies = [
 ]
 [tool.hatch.envs.docs.scripts]
 build = """
-  cd docs
-  cp _templates/custom-class-template-temp.rst _templates/custom-class-template.rst
-  make html
-  cp _templates/custom-class-template-actual.rst _templates/custom-class-template.rst
-  make html
-  rm _templates/custom-class-template.rst
+  cd docs &&
+  cp _templates/custom-class-template-temp.rst _templates/custom-class-template.rst &&
+  make html &&
+  cp _templates/custom-class-template-actual.rst _templates/custom-class-template.rst &&
+  make html &&
+  rm _templates/custom-class-template.rst &&
   cd ..
 """
 
@@ -104,7 +106,7 @@ exclude_lines = [
 ]
 
 [[tool.hatch.envs.hatch-test.matrix]]
-python = ["3.14", "3.14t", "3.13"]
+python = ["3.14", "3.13"]
 
 [tool.ruff.lint]
 ignore = [
@@ -117,6 +119,3 @@ ignore = [
 
 [tool.pyrefly.errors]
 bad-param-name-override = false
-
-[tool.uv]
-exclude-newer-package = "aiohttp=0 days"

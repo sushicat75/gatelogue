@@ -1,12 +1,12 @@
 [build-system]
-requires = ["hatchling==1.31.0"]
+requires = ["hatchling==1.32.0"]
 build-backend = "hatchling.build"
 
 [project]
 name = "gatelogue-types"
 dynamic = ["version"]
 description = "Types for loading and reading Gatelogue data"
-readme = "../README.md"
+#readme = "../README.md"
 requires-python = ">=3.13"
 license = "GPL-3.0-only"
 keywords = ["gatelogue", "mrt", "minecart rapid transit"]
@@ -54,7 +54,9 @@ path = "src/gatelogue_types/__about__.py"
 
 [tool.hatch.envs.default]
 features = ["dev"]
-#python = "3.12"
+post-install-commands = [
+  "hatch run uv pip install -e .",
+]
 
 [tool.hatch.envs.docs]
 extra-dependencies = [
@@ -89,7 +91,7 @@ features = ["dev"]
 default-args = ["tests/__init__.py"]
 
 [[tool.hatch.envs.hatch-test.matrix]]
-python = ["3.14", "3.14t", "3.13"]
+python = ["3.14", "3.13"]
 
 [tool.pytest.ini_options]
 pythonpath = [

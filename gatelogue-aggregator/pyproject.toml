@@ -29,13 +29,13 @@ classifiers = [
 ]
 dependencies = [
   "gatelogue-types",
-  "click==8.4.2",
+  "click==8.5.0",
   "msgspec==0.21.1",
   "pandas==3.0.5",
   "rich==15.0.0",
   "rnet==3.0.0rc22",
   "BeautifulSoup4==4.15.0",
-  "wikitextparser==1.0.3",
+  "wikitextparser==2.0.0",
   "pillow==12.3.0",
   "pyyaml==6.0.3"
 ]

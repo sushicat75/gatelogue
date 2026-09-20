@@ -14,9 +14,13 @@ jobs:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
-      - uses: ./.github/actions/mise
+      - uses: $/.github/actions/mise
         with:
           envs: "node"
+
+      - run: |
+          cd gatelogue-types-ts
+          pnpm i
 
       - run: |
           cd gatelogue-client
@@ -37,7 +41,7 @@ jobs:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
-      - uses: ./.github/actions/mise
+      - uses: $/.github/actions/mise
         with:
           envs: "py"
       #      - run: |
@@ -60,7 +64,7 @@ jobs:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
-      - uses: ./.github/actions/mise
+      - uses: $/.github/actions/mise
         with:
           envs: "rs"
 
@@ -82,7 +86,7 @@ jobs:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
-      - uses: ./.github/actions/mise
+      - uses: $/.github/actions/mise
         with:
           envs: "node"
 

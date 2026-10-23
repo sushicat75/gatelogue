@@ -1,6 +1,6 @@
 {
   "name": "gatelogue-client",
-  "version": "3.1.4+13",
+  "version": "3.1.5+13",
   "private": true,
   "license": "GPL-3.0-only",
   "type": "module",
@@ -19,7 +19,7 @@
   "dependencies": {
     "gatelogue-types": "workspace:../gatelogue-types-ts",
     "@sqlite.org/sqlite-wasm": "3.53.0-build1",
-    "vue": "3.5.43",
+    "vue": "3.5.44",
     "vue-router": "5.4.0",
     "vue-tippy": "6.8.0"
   },
@@ -31,18 +31,18 @@
     "@types/node": "24.19.2",
     "@vitejs/plugin-vue": "6.0.10",
     "@vue/tsconfig": "0.9.1",
-    "eslint": "10.12.0",
+    "eslint": "10.13.0",
     "eslint-config-prettier": "10.1.8",
     "eslint-plugin-vue": "10.11.1",
     "globals": "17.13.0",
     "npm-run-all2": "9.0.3",
     "prettier": "3.9.10",
     "typescript": "6.0.3",
-    "typescript-eslint": "8.71.2",
+    "typescript-eslint": "8.72.0",
     "vite": "8.3.4",
     "vite-plugin-vue-devtools": "8.2.1",
     "vue-eslint-parser": "10.4.1",
     "vue-tsc": "3.3.13"
   },
-  "packageManager": "pnpm@12.11.2"
+  "packageManager": "pnpm@12.14.0"
 }
